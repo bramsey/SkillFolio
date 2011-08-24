@@ -1,0 +1,7 @@
+%p
+	= f.label :name, 'Skill'
+	= f.text_field :name
+	= f.check_box :_destroy
+	= f.label :_destroy, 'Remove Skill'
+	- f.fields_for :levels do |builder|
+		= render 'level_fields', :f => builder

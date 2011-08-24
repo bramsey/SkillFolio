@@ -15,7 +15,10 @@ class AreasController < ApplicationController
   def new
     @domain = Domain.find( params[:domain_id] )
     @area = @domain.areas.build
-    3.times { @area.skills.build }
+    3.times  do 
+      skill = @area.skills.build
+      4.times { skill.levels.build }
+    end
   end
   
   def edit

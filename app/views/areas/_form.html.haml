@@ -5,9 +5,5 @@
 		= f.label :name
 		= f.text_field :name, :id => 'name_field'
 	- f.fields_for :skills do |builder|
-		%p
-			= builder.label :name, 'Skill'
-			= builder.text_field :name
-			= builder.check_box :_destroy
-			= builder.label :_destroy, 'Remove Skill'
+		= render 'skill_fields', :f => builder
 	= f.submit submit_text
