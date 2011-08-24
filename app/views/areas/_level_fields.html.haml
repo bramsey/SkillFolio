@@ -1,5 +1,6 @@
-%p
+%p.fields
 	= f.label :name, 'Level'
 	= f.text_area :description, :rows => 4
-	= f.check_box :_destroy
-	= f.label :_destroy, 'Remove Level'
+	= link_to_remove_fields 'remove', f
+	%p
+		= link_to_add_fields 'Add Level', f, :levels
