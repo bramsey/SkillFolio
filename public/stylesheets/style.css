@@ -303,6 +303,24 @@ input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 
+/* line 51, ../../app/stylesheets/partials/_page.scss */
+#container {
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 960px;
+}
+
+/* line 60, ../../app/stylesheets/partials/_page.scss */
+#main {
+  margin-top: 1em;
+}
+
+/* line 64, ../../app/stylesheets/partials/_page.scss */
+footer {
+  margin-top: 1em;
+}
+
 /*/mediaquery*/
 /*/mediaquery*/
 @media print {

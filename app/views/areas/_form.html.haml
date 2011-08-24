@@ -1,0 +1,13 @@
+= form_for @area do |f|
+	= render 'shared/error_messages', :object => f.object
+	= f.hidden_field :domain_id
+	%p
+		= f.label :name
+		= f.text_field :name, :id => 'name_field'
+	- f.fields_for :skills do |builder|
+		%p
+			= builder.label :name, 'Skill'
+			= builder.text_field :name
+			= builder.check_box :_destroy
+			= builder.label :_destroy, 'Remove Skill'
+	= f.submit submit_text

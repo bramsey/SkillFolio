@@ -1,13 +1,2 @@
 %h2 New Area
-
-= form_for @area do |f|
-	= render 'shared/error_messages', :object => f.object
-	= f.hidden_field :domain_id
-	%p
-		= f.label :name
-		= f.text_field :name, :id => 'name_field'
-	- f.fields_for :skills do |builder|
-		%p
-			= builder.label :name, 'Skill'
-			= builder.text_field :name
-	= f.submit "Add Area"
+= render :partial => 'form', :locals => {:submit_text => 'Add Area'}

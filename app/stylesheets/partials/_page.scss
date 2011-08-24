@@ -48,10 +48,19 @@ input:invalid, textarea:invalid {
 
 body {}
 
-#container {}
+#container {
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	width: 960px;
+}
 
 header {}
 
-#main {}
+#main {
+	margin-top: 1em;
+}
 
-footer {}
+footer {
+	margin-top: 1em;
+}
