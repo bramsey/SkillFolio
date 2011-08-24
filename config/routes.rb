@@ -1,6 +1,9 @@
 Skills::Application.routes.draw do
   
   resources :domains
+  resources :areas
+  resources :skills 
+  resources :levels
   
   devise_for :users do
     get "sign_in", :to => "devise/sessions#new"
