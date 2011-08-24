@@ -55,7 +55,9 @@ body {}
 	width: 960px;
 }
 
-header {}
+header {
+	font-size: 150%;
+}
 
 #main {
 	margin-top: 1em;
@@ -64,6 +66,22 @@ header {}
 footer {
 	margin-top: 1em;
 }
+
+.success, .error, .notice, #error_explanation {
+	padding-left: .5em;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	color: #666;
+	clear: both;
+	margin-bottom: 1em;
+	//@include border-radius(2px);
+	a { color: #000; &:hover { color: #00c; }}
+}
+
+.success { border: 1px solid #0a0; background-color: #cfc; }
+.notice { border: 1px solid #FFD324; background-color: #ffc; }
+.error, #error_explanation { border: 1px solid #a00; background-color: #fcc; }
+
 
 .skill {
 	border: 1px solid #ccc;

@@ -311,24 +311,65 @@ input:invalid, textarea:invalid {
   width: 960px;
 }
 
-/* line 60, ../../app/stylesheets/partials/_page.scss */
+/* line 58, ../../app/stylesheets/partials/_page.scss */
+header {
+  font-size: 150%;
+}
+
+/* line 62, ../../app/stylesheets/partials/_page.scss */
 #main {
   margin-top: 1em;
 }
 
-/* line 64, ../../app/stylesheets/partials/_page.scss */
+/* line 66, ../../app/stylesheets/partials/_page.scss */
 footer {
   margin-top: 1em;
 }
 
-/* line 68, ../../app/stylesheets/partials/_page.scss */
+/* line 70, ../../app/stylesheets/partials/_page.scss */
+.success, .error, .notice, #error_explanation {
+  padding-left: .5em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  color: #666;
+  clear: both;
+  margin-bottom: 1em;
+}
+/* line 78, ../../app/stylesheets/partials/_page.scss */
+.success a, .error a, .notice a, #error_explanation a {
+  color: #000;
+}
+/* line 78, ../../app/stylesheets/partials/_page.scss */
+.success a:hover, .error a:hover, .notice a:hover, #error_explanation a:hover {
+  color: #00c;
+}
+
+/* line 81, ../../app/stylesheets/partials/_page.scss */
+.success {
+  border: 1px solid #0a0;
+  background-color: #cfc;
+}
+
+/* line 82, ../../app/stylesheets/partials/_page.scss */
+.notice {
+  border: 1px solid #FFD324;
+  background-color: #ffc;
+}
+
+/* line 83, ../../app/stylesheets/partials/_page.scss */
+.error, #error_explanation {
+  border: 1px solid #a00;
+  background-color: #fcc;
+}
+
+/* line 86, ../../app/stylesheets/partials/_page.scss */
 .skill {
   border: 1px solid #ccc;
   overflow: hidden;
   background: #eee;
 }
 
-/* line 74, ../../app/stylesheets/partials/_page.scss */
+/* line 92, ../../app/stylesheets/partials/_page.scss */
 .level {
   float: left;
   width: 19%;
