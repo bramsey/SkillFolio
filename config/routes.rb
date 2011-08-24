@@ -3,8 +3,10 @@ Skills::Application.routes.draw do
   resources :domains do
     resources :areas, :only => [:index, :new]
   end
-  resources :areas, :except => [:index, :new]
-  resources :skills 
+  resources :areas, :except => [:index, :new] do
+    resources :skills, :only => [:new]
+  end
+  resources :skills, :except => [:new]
   resources :levels
   
   devise_for :users do

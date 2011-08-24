@@ -14,6 +14,8 @@ class AreasController < ApplicationController
   
   def new
     @domain = Domain.find( params[:domain_id] )
+    @area = @domain.areas.build
+    3.times { @area.skills.build }
   end
   
   def edit
@@ -21,14 +23,14 @@ class AreasController < ApplicationController
   end
   
   def create
-    @domain = Domain.find(params[:area][:domain_id])
     
+    @domain = Domain.find(params[:area][:domain_id])
     @area  = @domain.areas.build(params[:area])
     @area.save ?
       flash[:success] = 'Area created!' :
       flash[:error] = 'Area not saved.'
     
-    redirect_to domain_areas_path(@domain)
+    respond_with @area
   end
   
   def update
@@ -41,11 +43,12 @@ class AreasController < ApplicationController
   end
   
   def destroy
+    @area = Area.find( params[:id] )
     @area.destroy ?
       flash.now[:success] = 'Area deleted.' :
       flash.now[:error] = 'Error deleting area.'
     
-    respond_with @area
+    redirect_to domain_areas_path(@area.domain)
   end
   
   private
