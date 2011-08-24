@@ -1,2 +1,8 @@
-%h1 Areas#new
-%p Find me in app/views/areas/new.html.haml
+%h2 New Area
+
+= form_for @domain.areas.build(:domain_id => @domain.id) do |f|
+	= render 'shared/error_messages', :object => f.object
+	= f.hidden_field :domain_id
+	= f.label :name
+	= f.text_field :name, :id => "name_field"
+	= f.submit "Add Area"

@@ -1,19 +1,9 @@
 Skills::Application.routes.draw do
-  
-  get "areas/index"
 
-  get "areas/create"
-
-  get "areas/update"
-
-  get "areas/destroy"
-
-  get "areas/new"
-
-  get "areas/edit"
-
-  resources :domains
-  resources :areas
+  resources :domains do
+    resources :areas, :only => [:index, :new]
+  end
+  resources :areas, :except => [:index, :new]
   resources :skills 
   resources :levels
   
