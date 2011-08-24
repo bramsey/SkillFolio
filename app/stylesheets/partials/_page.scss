@@ -64,3 +64,15 @@ header {}
 footer {
 	margin-top: 1em;
 }
+
+.skill {
+	border: 1px solid #ccc;
+	overflow: hidden;
+	background: #eee;
+}
+
+.level {
+	float: left;
+	width: 19%;
+	padding: .25em;
+}

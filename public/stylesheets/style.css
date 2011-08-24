@@ -321,6 +321,20 @@ footer {
   margin-top: 1em;
 }
 
+/* line 68, ../../app/stylesheets/partials/_page.scss */
+.skill {
+  border: 1px solid #ccc;
+  overflow: hidden;
+  background: #eee;
+}
+
+/* line 74, ../../app/stylesheets/partials/_page.scss */
+.level {
+  float: left;
+  width: 19%;
+  padding: .25em;
+}
+
 /*/mediaquery*/
 /*/mediaquery*/
 @media print {
