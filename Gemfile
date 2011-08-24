@@ -14,6 +14,7 @@ gem "html5-boilerplate"
 gem 'devise'
 gem 'notifo', :git => 'git://github.com/jot/notifo.git'
 gem 'json'
+gem 'nested_form'
 
 group :development, :test do
   gem 'rspec-rails'

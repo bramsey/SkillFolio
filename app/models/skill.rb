@@ -1,5 +1,5 @@
 class Skill < ActiveRecord::Base
-  #attr_accessible :name
+  attr_accessible :name, :area_id, :levels_attributes
   
   belongs_to :area
   has_many :levels, :dependent => :destroy

@@ -1,9 +1,9 @@
-= form_for @area do |f|
+= nested_form_for @area do |f|
 	= render 'shared/error_messages', :object => f.object
 	= f.hidden_field :domain_id
 	%p
 		= f.label :name
-		= f.text_field :name, :id => 'name_field'
-	- f.fields_for :skills do |builder|
-		= render 'skill_fields', :f => builder
+		= f.text_field :name
+	= f.fields_for :skills
+	= f.link_to_add 'Add a Skill', :skills
 	= f.submit submit_text
