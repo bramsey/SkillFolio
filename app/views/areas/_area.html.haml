@@ -1,5 +1,11 @@
 .area
-	= link_to area.name, area
-	|
-	= link_to "delete", area, :method => :delete, :confirm => "You sure?", 
-		:title => "Delete #{area.name}"
+	%p
+		%h3
+			= area.name
+			|
+			= link_to 'Edit', edit_area_path(area)
+			|
+			= link_to "Delete", area, :method => :delete, :confirm => "You sure?", 
+				:title => "Delete #{area.name}"
+	.matrix
+		= render area.skills

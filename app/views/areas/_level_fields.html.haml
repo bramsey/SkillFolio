@@ -1,4 +1,7 @@
-%p
-	= f.label :name, 'Level'
-	= f.text_area :description, :rows => 4
-	= f.link_to_remove 'remove'
+.wrapper
+	.level
+		= f.label :name, 'Level'
+		= f.text_area :description, :rows => 8
+		= f.label :met, 'met?'
+		= f.check_box :met
+		= f.link_to_remove 'remove level'

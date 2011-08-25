@@ -1,5 +1,5 @@
 %h1 
-	SkillFolio
+	= link_to 'SkillFolio', root_path, :id => 'logo'
 	-if user_signed_in?
 		= link_to("(sign out #{current_user.email})", destroy_user_session_path, :method => 'delete')
 		

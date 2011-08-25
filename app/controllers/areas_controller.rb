@@ -33,7 +33,7 @@ class AreasController < ApplicationController
       flash[:success] = 'Area created!' :
       flash[:error] = 'Area not saved.'
     
-    respond_with @area
+    respond_with @area.domain
   end
   
   def update
@@ -42,7 +42,7 @@ class AreasController < ApplicationController
       flash[:success] = "Area updated." :
       flash[:error] = "Area not updated."
       
-    respond_with @area
+    respond_with @area.domain
   end
   
   def destroy

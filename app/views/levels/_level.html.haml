@@ -1,4 +1,6 @@
-.level
-	= level.description
-	%br
-	%br
+.wrapper(class = "#{level.met ? 'met' + level_rank(level) : 'empty' + level_rank(level)}")
+	.level
+		= level.description
+		%br
+		%br
+	.clear

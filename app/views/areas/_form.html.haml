@@ -4,6 +4,7 @@
 	%p
 		= f.label :name
 		= f.text_field :name
+	%br
 	= f.fields_for :skills
 	= f.link_to_add 'Add a Skill', :skills
 	= f.submit submit_text

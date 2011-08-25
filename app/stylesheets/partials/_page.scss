@@ -56,8 +56,17 @@ body {}
 }
 
 header {
-	font-size: 150%;
 }
+
+#logo {
+	font-size: 180%;
+	text-decoration: none;
+	color: #444;
+	&:hover { color: #44f; }
+}
+
+h2 { font-size: 140%; }
+h3 { font-size: 120%; }
 
 #main {
 	margin-top: 1em;
@@ -85,12 +94,65 @@ footer {
 
 .skill {
 	border: 1px solid #ccc;
+	//float: left;
+	clear: both;
 	overflow: hidden;
 	background: #eee;
+	width: 958px;
+	p { 
+		margin-top: .5em; 
+		margin-left: .5em;
+	}
 }
 
-.level {
-	float: left;
-	width: 19%;
-	padding: .25em;
+.level, {
+	//min-height: 200px;
+	padding: .5em;
+	textarea, input {
+		width: 100%;
+	}
 }
+
+.area, .matrix {
+	margin-top: .5em;
+	margin-bottom: .5em;
+	overflow: hidden;
+	width: 100%;
+}
+
+.area { margin-top: 1em; }
+
+$empty_color: #f00;
+$met_color: lighten(#0f0, 45%);
+
+.wrapper {
+	float: left;
+	width: 20%;
+	height: 100%;
+	overflow: hidden;
+	padding-bottom: 5000px;
+	margin-bottom: -5000px;
+}
+
+.clear { clear: both; }
+
+.empty1 { background: $empty_color;}
+.empty2 { background: lighten($empty_color, 5%); }
+.empty3 { background: lighten($empty_color, 10%); }
+.empty4 { background: lighten($empty_color, 15%); }
+.empty5 { background: lighten($empty_color, 20%); }
+.empty6 { background: lighten($empty_color, 25%); }
+.empty7 { background: lighten($empty_color, 30%); }
+.empty8 { background: lighten($empty_color, 35%); }
+.empty9 { background: lighten($empty_color, 40%); }
+.empty10 { background: lighten($empty_color, 45%); }
+.met1 { background: $met_color;}
+.met2 { background: darken($met_color, 5%); }
+.met3 { background: darken($met_color, 10%); }
+.met4 { background: darken($met_color, 15%); }
+.met5 { background: darken($met_color, 20%); }
+.met6 { background: darken($met_color, 25%); }
+.met7 { background: darken($met_color, 30%); }
+.met8 { background: darken($met_color, 35%); }
+.met9 { background: darken($met_color, 40%); }
+.met10 { background: darken($met_color, 45%); }

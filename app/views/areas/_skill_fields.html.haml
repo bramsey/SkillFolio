@@ -1,8 +1,9 @@
-%p
-	= f.label :name, 'Skill'
-	= f.link_to_remove 'remove'
-	%br
-	= f.text_field :name
-= f.fields_for :levels
-%p
+.skill
+	.wrapper
+		.level
+			= f.label :name, 'Skill'
+			= f.label :name
+			= f.text_field :name
+			= f.link_to_remove 'Remove Skill'
+	= f.fields_for :levels
 	= f.link_to_add 'Add a Level', :levels
