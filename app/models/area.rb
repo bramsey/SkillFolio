@@ -8,4 +8,10 @@ class Area < ActiveRecord::Base
                                 :allow_destroy => true
   
   validates :name, :presence => true
+  
+  def percent_complete
+    sum = 0
+    skills.each {|skill| sum += skill.percent_complete.to_i }
+    sum / skills.length
+  end
 end

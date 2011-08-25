@@ -8,4 +8,10 @@ class Skill < ActiveRecord::Base
                                 :allow_destroy => true
   
   validates :name, :presence => true
+  
+  def percent_complete
+    complete = levels.collect {|level| level if level.met}
+    complete.compact!
+    ((complete.length.to_f / levels.length.to_f)*100).to_i
+  end
 end

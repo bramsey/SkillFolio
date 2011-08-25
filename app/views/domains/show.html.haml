@@ -1,4 +1,7 @@
-%h2= @domain.name
-= link_to 'New Area', new_domain_area_path(@domain)
+%h2
+	= @domain.name
+	= "-- #{@domain.percent_complete}% complete"
+- if current_user == @domain.user
+	= link_to 'New Area', new_domain_area_path(@domain)
 %hr
 = render @domain.areas

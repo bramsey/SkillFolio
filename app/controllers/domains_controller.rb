@@ -1,5 +1,5 @@
 class DomainsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:show]
   before_filter :load, :only => [:index]
   
   respond_to :html, :js

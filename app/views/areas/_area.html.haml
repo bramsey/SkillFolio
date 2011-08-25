@@ -2,11 +2,13 @@
 	%p
 		%h3
 			= area.name
-			[
-			= link_to 'Edit', edit_area_path(area)
-			= "-"
-			= link_to "Delete", area, :method => :delete, :confirm => "You sure?", 
-				:title => "Delete #{area.name}"
-			]
+			- if current_user == area.domain.user
+				[
+				= link_to 'Edit', edit_area_path(area)
+				= "-"
+				= link_to "Delete", area, :method => :delete, :confirm => "You sure?", 
+					:title => "Delete #{area.name}"
+				]
+			= "-- #{area.percent_complete}% complete"
 	.matrix
 		= render area.skills

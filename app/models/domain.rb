@@ -5,4 +5,10 @@ class Domain < ActiveRecord::Base
   has_many :areas, :dependent => :destroy
   
   validates :name, :presence => true
+  
+  def percent_complete
+    sum = 0
+    areas.each {|area| sum += area.percent_complete.to_i }
+    sum / areas.length
+  end
 end
