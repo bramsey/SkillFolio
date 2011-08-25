@@ -384,7 +384,7 @@ footer {
   clear: both;
   overflow: hidden;
   background: #eee;
-  width: 958px;
+  width: 956px;
 }
 /* line 102, ../../app/stylesheets/partials/_page.scss */
 .skill p {
@@ -407,6 +407,12 @@ footer {
   margin-bottom: .5em;
   overflow: hidden;
   width: 100%;
+}
+
+/* line 122, ../../app/stylesheets/partials/_page.scss */
+.matrix {
+  border: 1px solid #999;
+  width: 958px;
 }
 
 /* line 123, ../../app/stylesheets/partials/_page.scss */

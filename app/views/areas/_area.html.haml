@@ -2,10 +2,11 @@
 	%p
 		%h3
 			= area.name
-			|
+			[
 			= link_to 'Edit', edit_area_path(area)
-			|
+			= "-"
 			= link_to "Delete", area, :method => :delete, :confirm => "You sure?", 
 				:title => "Delete #{area.name}"
+			]
 	.matrix
 		= render area.skills
