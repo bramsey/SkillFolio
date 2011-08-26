@@ -1,17 +1,24 @@
+/**
+ * Specifies select behavior for levels.
+ */
 $('#container').delegate('.met_check', 'click', function () {
 	var checked = this.checked;
 	var checkboxes = $(this).closest('.skill').find(':checkbox');
 	var this_index = jQuery.inArray(this, checkboxes);
 	checkboxes.each(function(index, value){
 		if( checked ){
+			// Checks all boxes lower than the checked box.
 			if( index <= this_index) { value.checked = checked; };
 		} else {
+			// Unchecks all boxes higher than the unchecked box.
 			if( index > this_index) { value.checked = checked; };
 		}
 	});
 });
 
-
+/**
+ * Ensures the 'add level' link disappears when the fourth level is added. 
+ */
 $('form a.add_nested_fields').live('click', function () {
 	if ($(this).attr('data-association') === 'levels'){
 		siblings = $(this).siblings('.fields:visible');
@@ -21,6 +28,9 @@ $('form a.add_nested_fields').live('click', function () {
 	} 
 });
 
+/**
+ * Adds four levels when a new skill is added. 
+ */
 $('form').live('nested:fieldAdded', function (event) {
 	
 	if (event.association === 'skills'){
@@ -29,6 +39,9 @@ $('form').live('nested:fieldAdded', function (event) {
 	}
 });
 
+/**
+ * Ensures the 'add level' link appears when the number of levels drops below four. 
+ */
 $('form a.remove_nested_fields').live('click', function () {
 	siblings = $(this).parentsUntil('.skill').children('.fields:visible');
 	if(siblings.length <= 4){
