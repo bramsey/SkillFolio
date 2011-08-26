@@ -18,8 +18,17 @@ $('form a.add_nested_fields').live('click', function () {
 		if(siblings.length >= 3){
 			$(this).hide();
 		}
+	} 
+});
+
+$('form').live('nested:fieldAdded', function (event) {
+	
+	if (event.association === 'skills'){
+		$(this).children('.fields').last().find('.add_nested_fields').trigger('click');
+		$(this).children('.fields').last().find('.add_nested_fields').trigger('click');
 	}
 });
+
 $('form a.remove_nested_fields').live('click', function () {
 	siblings = $(this).parentsUntil('.skill').children('.fields:visible');
 	if(siblings.length <= 4){
