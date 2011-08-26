@@ -9,6 +9,6 @@ class Domain < ActiveRecord::Base
   def percent_complete
     sum = 0
     areas.each {|area| sum += area.percent_complete.to_i }
-    sum / areas.length
+    areas.empty? ? 0 : sum / areas.length
   end
 end

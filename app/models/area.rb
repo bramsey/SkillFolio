@@ -12,6 +12,6 @@ class Area < ActiveRecord::Base
   def percent_complete
     sum = 0
     skills.each {|skill| sum += skill.percent_complete.to_i }
-    sum / skills.length
+    skills.empty? ? 0 : sum / skills.length
   end
 end
