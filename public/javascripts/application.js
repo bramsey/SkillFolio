@@ -17,6 +17,14 @@ $('#container').delegate('.met_check', 'click', function () {
 });
 
 /**
+ * Handles collapsing of slideable divs.
+ */
+$('#container').delegate('.slide-toggle', 'click', function () {
+	$(this).parents('.area').children('.matrix').slideToggle('medium');
+	return false;
+});
+
+/**
  * Ensures the 'add level' link disappears when the fourth level is added. 
  */
 $('form a.add_nested_fields').live('click', function () {
@@ -34,6 +42,8 @@ $('form a.add_nested_fields').live('click', function () {
 $('form').live('nested:fieldAdded', function (event) {
 	
 	if (event.association === 'skills'){
+		$(this).children('.fields').last().find('.add_nested_fields').trigger('click');
+		$(this).children('.fields').last().find('.add_nested_fields').trigger('click');
 		$(this).children('.fields').last().find('.add_nested_fields').trigger('click');
 		$(this).children('.fields').last().find('.add_nested_fields').trigger('click');
 	}

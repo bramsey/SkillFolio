@@ -1,7 +1,7 @@
 .area
 	%p
 		%h3
-			= area.name
+			= link_to area.name, '#', :class => 'slide-toggle'
 			- if current_user == area.domain.user
 				[
 				= link_to 'Edit', edit_area_path(area)

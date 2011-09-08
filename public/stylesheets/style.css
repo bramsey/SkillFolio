@@ -413,6 +413,7 @@ footer {
 .matrix {
   border: 1px solid #999;
   width: 958px;
+  display: none;
 }
 
 /* line 123, ../../app/stylesheets/partials/_page.scss */
