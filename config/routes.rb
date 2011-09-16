@@ -10,7 +10,8 @@ Skills::Application.routes.draw do
   resources :levels
   
   devise_for :users do
-    get "sign_in", :to => "devise/sessions#new"
+    get "/users/sign_in", :to => "devise/sessions#new"
+    get "/users/sign_out", :to => "devise/sessions#destroy"
   end
 
   root :to => "pages#index"
