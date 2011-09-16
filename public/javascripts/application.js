@@ -20,7 +20,7 @@ $('#container').delegate('.met_check', 'click', function () {
  * Handles collapsing of slideable divs.
  */
 $('#container').delegate('.slide-toggle', 'click', function () {
-	$(this).parents('.area').children('.matrix').slideToggle('medium');
+	$(this).parents('.area').children('.matrix').toggle('fast');
 	return false;
 });
 
