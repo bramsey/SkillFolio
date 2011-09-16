@@ -16,6 +16,10 @@ $('#container').delegate('.met_check', 'click', function () {
 	});
 });
 
+$('#flash').live('click', function() {
+  	$('#flash').slideUp('fast');
+});
+
 /**
  * Handles collapsing of slideable divs.
  */
