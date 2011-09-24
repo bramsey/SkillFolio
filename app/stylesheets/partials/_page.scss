@@ -76,6 +76,30 @@ footer {
 	margin-top: 1em;
 }
 
+nav {
+	font-size: 160%;
+	margin-top: .25em;
+	//margin-left: .1em;
+	padding-bottom: .1em;
+	clear: both;
+}
+
+
+#nav {
+	position: relative;
+	//margin-left: 140px;
+	a {
+		color: #777;
+		text-decoration: none;
+		&:hover { color: #DD4B39; }
+	}
+	.selected {
+		//color: #DD4B39;
+		color: #44f;
+		font-weight: bold;
+	}
+}
+
 .success, .error, .notice, #error_explanation {
 	padding-left: .5em;
 	padding-top: .5em;
