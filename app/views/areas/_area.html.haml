@@ -5,9 +5,9 @@
 			- if current_user == area.domain.user
 				[
 				= link_to 'Edit', edit_area_path(area)
-				= "-"
-				= link_to 'Delete', area, :method => :delete, :confirm => 'You sure?'
 				]
 			= "-- #{area.percent_complete}% complete"
+			- if current_user == area.domain.user
+				= button_to 'Delete', area, :method => :delete, :confirm => 'You sure?', :class => 'delete'
 	.matrix
 		= render area.skills
