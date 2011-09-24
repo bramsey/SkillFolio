@@ -2,3 +2,5 @@
 	%h2
 		= link_to domain.name, domain
 		= "-- #{domain.percent_complete}% complete"
+		= button_to 'Copy', copy_domain_path(domain) unless domain.user == current_user
+		= button_to 'Delete', domain, :method => :delete, :confirm => 'You sure?' if domain.user == current_user

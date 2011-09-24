@@ -1,6 +1,9 @@
 Skills::Application.routes.draw do
 
   resources :domains do
+    member do
+      post 'copy'
+    end
     resources :areas, :only => [:index, :new]
   end
   resources :areas, :except => [:index, :new] do

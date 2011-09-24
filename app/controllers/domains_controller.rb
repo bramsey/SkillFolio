@@ -26,11 +26,23 @@ class DomainsController < ApplicationController
   end
   
   def destroy
+    @domain = Domain.find( params[:id] )
     @domain.destroy ?
       flash.now[:success] = 'Domain deleted.' :
       flash.now[:error] = 'Error deleting domain.'
     
     respond_with @domain
+  end
+  
+  def copy
+    @domain = Domain.find( params[:id] )
+    @new_domain = @domain.copy_to current_user
+    @new_domain ? 
+      flash[:success] = 'Domain copied successfully.' :
+      flash[:error] = 'Could not copy domain.'
+    
+    @new_domain ||= @domain
+    redirect_to @new_domain
   end
   
   private
