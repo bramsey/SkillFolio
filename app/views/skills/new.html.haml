@@ -1,8 +1,0 @@
-%h2 New Skill
-
-= form_for @area.skills.build(:area_id => @area.id) do |f|
-	= render 'shared/error_messages', :object => f.object
-	= f.hidden_field :area_id
-	= f.label :name
-	= f.text_field :name, :id => "name_field"
-	= f.submit "Add Area"
