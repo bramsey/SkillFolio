@@ -536,6 +536,11 @@ footer {
   background: lime;
 }
 
+/* line 160, ../../app/stylesheets/partials/_page.scss */
+.button_to {
+  float: right;
+}
+
 /*/mediaquery*/
 /*/mediaquery*/
 @media print {

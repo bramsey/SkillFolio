@@ -1,5 +1,5 @@
 class DomainsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show]
+  before_filter :authenticate_user!, :except => [:index, :show]
   before_filter :load, :only => [:index]
   
   respond_to :html, :js
@@ -19,7 +19,7 @@ class DomainsController < ApplicationController
     @domain  = current_user.domains.build(params[:domain])
     if @domain.save
       flash[:success] = 'Domain created!'
-      redirect_to domains_path
+      respond_with @domain
     else
       render 'domains/index'
     end
@@ -36,7 +36,6 @@ class DomainsController < ApplicationController
   private
   
     def load
-      @user = current_user
-      @domains = @user.domains
+      @domains = Domain.all
     end
 end

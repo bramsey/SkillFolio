@@ -51,7 +51,7 @@ class AreasController < ApplicationController
       flash.now[:success] = 'Area deleted.' :
       flash.now[:error] = 'Error deleting area.'
     
-    redirect_to domain_areas_path(@area.domain)
+    respond_with @area.domain
   end
   
   private
