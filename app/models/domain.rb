@@ -21,4 +21,26 @@ class Domain < ActiveRecord::Base
     end
     new_domain.save ? new_domain : nil
   end
+  
+  def to_hash
+    domain_hash = {}
+    areas_array = []
+    areas.each {|area| areas_array << build_area_hash( area ) }
+    domain_hash['areas'] = areas_array
+    domain_hash
+  end
+  
+  private
+    
+    def build_area_hash( area )
+      skills_array = []
+      area.skills.each {|skill| skills_array << build_skill_hash( skill ) }
+      { 'name' => area.name, 'skills' => skills_array }
+    end
+    
+    def build_skill_hash( skill )
+      levels_array = []
+      skill.levels.each {|level| levels_array << level.description }
+      { 'name' => skill.name, 'levels' => levels_array }
+    end
 end
