@@ -440,7 +440,7 @@ nav {
 .matrix {
   border: 1px solid #999;
   width: 958px;
-  display: none;
+  display: show;
 }
 
 /* line 147, ../../app/stylesheets/partials/_page.scss */

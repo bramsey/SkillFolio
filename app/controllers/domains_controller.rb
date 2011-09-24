@@ -28,8 +28,8 @@ class DomainsController < ApplicationController
   def destroy
     @domain = Domain.find( params[:id] )
     @domain.destroy ?
-      flash.now[:success] = 'Domain deleted.' :
-      flash.now[:error] = 'Error deleting domain.'
+      flash[:success] = 'Domain deleted.' :
+      flash[:error] = 'Error deleting domain.'
     
     respond_with @domain
   end
