@@ -24,7 +24,8 @@ $('#flash').live('click', function() {
  * Handles collapsing of slideable divs.
  */
 $('#container').delegate('.slide-toggle', 'click', function () {
-	$(this).parents('.area').children('.matrix').toggle('fast');
+	//$(this).parents('.area').children('.matrix').toggle('fast');
+	$(this).closest('div').find('.slideable').first().slideToggle('fast');
 	return false;
 });
 

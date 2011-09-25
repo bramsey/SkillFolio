@@ -1,5 +1,7 @@
 Skills::Application.routes.draw do
 
+  get "users/show"
+
   resources :domains do
     member do
       post 'copy'
@@ -16,6 +18,8 @@ Skills::Application.routes.draw do
     get "/users/sign_in", :to => "devise/sessions#new"
     get "/users/sign_out", :to => "devise/sessions#destroy"
   end
+  
+  match '/:alias' => 'users#show'
 
   root :to => "pages#index"
 

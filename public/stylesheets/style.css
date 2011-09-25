@@ -454,7 +454,6 @@ nav {
 .matrix {
   border: 1px solid #999;
   width: 958px;
-  display: show;
 }
 
 /* line 156, ../../app/stylesheets/partials/_page.scss */
@@ -580,6 +579,11 @@ nav {
 /* line 193, ../../app/stylesheets/partials/_page.scss */
 .button_to {
   float: right;
+}
+
+/* line 195, ../../app/stylesheets/partials/_page.scss */
+.slideable {
+  display: none;
 }
 
 /*/mediaquery*/

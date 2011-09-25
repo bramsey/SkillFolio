@@ -9,5 +9,5 @@
 			= "-- #{area.percent_complete}% complete"
 			- if current_user == area.domain.user
 				= button_to 'Delete', area, :method => :delete, :confirm => 'You sure?', :class => 'delete'
-	.matrix
+	.matrix(class = 'slideable')
 		= render area.skills

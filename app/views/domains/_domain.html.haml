@@ -1,6 +1,11 @@
 .domain
 	%h2
-		= link_to domain.name, domain
+		= link_to domain.name, '#', :class => 'slide-toggle'
 		= "-- #{domain.percent_complete}% complete"
-		= button_to 'Copy', copy_domain_path(domain) unless domain.user == current_user
+		= button_to 'Copy', copy_domain_path(domain) unless domain.user == current_user if user_signed_in?
 		= button_to 'Delete', domain, :method => :delete, :confirm => 'You sure?' if domain.user == current_user
+	- if current_user == domain.user
+		= link_to 'New Area', new_domain_area_path(domain)
+	%hr
+	.areas(class = 'slideable')
+		= render domain.areas

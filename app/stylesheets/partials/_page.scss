@@ -152,7 +152,7 @@ nav {
 	overflow: hidden;
 	width: 100%;
 }
-.matrix { border: 1px solid #999; width: 958px; display: show; }
+.matrix { border: 1px solid #999; width: 958px; }
 .area { margin-top: 1em; }
 
 $empty_color: #f00;
@@ -191,3 +191,5 @@ $met_color: lighten(#0f0, 45%);
 .met10 { background: darken($met_color, 45%); }
 
 .button_to { float: right; }
+
+.slideable { display: none; }
