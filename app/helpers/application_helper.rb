@@ -7,7 +7,8 @@ module ApplicationHelper
   def siteNav
     if user_signed_in?
       link("Dashboard", root_path) + " " +
-      link("Domains", domains_path)
+      link("Domains", domains_path) + " " +
+      link('Settings', '#')
     else
       #put logged_out links here.
     end
