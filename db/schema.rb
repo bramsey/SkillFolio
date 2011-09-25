@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110824031910) do
+ActiveRecord::Schema.define(:version => 20110925181636) do
 
   create_table "areas", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(:version => 20110824031910) do
     t.datetime "updated_at"
   end
 
+  create_table "matrices", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "data"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "skills", :force => true do |t|
     t.string   "name"
     t.integer  "area_id"
@@ -55,8 +64,10 @@ ActiveRecord::Schema.define(:version => 20110824031910) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "alias"
   end
 
+  add_index "users", ["alias"], :name => "index_users_on_alias", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
