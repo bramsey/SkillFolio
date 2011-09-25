@@ -5,10 +5,12 @@ module ApplicationHelper
   end
   
   def siteNav
+    delimeter = ' - '
     if user_signed_in?
-      link("Dashboard", root_path) + " " +
-      link("Domains", domains_path) + " " +
-      link('Settings', '#')
+      link("Dashboard", root_path) + delimeter +
+      link("Domains", domains_path) + delimeter +
+      link('Settings', '#') + delimeter + 
+      link("Log Out", destroy_user_session_path)
     else
       #put logged_out links here.
     end

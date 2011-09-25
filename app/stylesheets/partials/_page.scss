@@ -56,13 +56,17 @@ body {}
 }
 
 header {
+	h1 { width: 40%;}
 }
 
 #logo {
-	font-size: 180%;
-	text-decoration: none;
-	color: #444;
-	&:hover { color: #44f; }
+	a {
+		font-size: 180%;
+		text-decoration: none;
+		color: #444;
+		&:hover { color: #44f; }
+	}
+	float: left;
 }
 
 h2 { font-size: 140%; }
@@ -70,10 +74,13 @@ h3 { font-size: 120%; }
 
 #main {
 	margin-top: 1em;
+	overflow: auto;
+	width: 100%;
 }
 
 footer {
 	margin-top: 1em;
+	position: relative;
 }
 
 nav {
@@ -81,12 +88,14 @@ nav {
 	margin-top: .25em;
 	//margin-left: .1em;
 	padding-bottom: .1em;
-	clear: both;
+	float: right;
+	position: relative;
 }
 
 
 #nav {
 	position: relative;
+	float: right;
 	//margin-left: 140px;
 	a {
 		color: #777;
