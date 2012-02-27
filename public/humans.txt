@@ -3,9 +3,9 @@
 
 
 /* TEAM */
-  <your title>: <your name>
+  Bill Ramsey
   Site: 
-  Twitter: 
+  Twitter: @billiamram
   Location: 
 
 /* THANKS */
